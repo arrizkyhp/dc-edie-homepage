@@ -25,6 +25,10 @@
   --box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   max-width: 1300px;
@@ -178,6 +182,10 @@ main .hero .cta p.cta-text {
   background-color: var(--color-light-blue);
 }
 
+.services {
+  margin-bottom: 200px;
+}
+
 .services h1.subhead {
   font-family: Poppins;
   font-size: 36px;
@@ -185,4 +193,90 @@ main .hero .cta p.cta-text {
 
   padding-left: 110px;
   max-width: 350px;
+}
+
+.services .services-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.services .services-cards .services-card {
+  max-width: 340px;
+  padding: 46px 34px;
+  cursor: pointer;
+
+  border-radius: var(--border-radius-xl);
+  transition: all 0.3s ease-in-out;
+}
+
+.services .services-cards .services-card:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.services .services-card .services-card-icon {
+  /* padding: 20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 67px;
+  height: 67px;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 30px;
+}
+
+.services .services-card .services-card-icon i {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+.services .services-card .services-card-icon.--ui-ux {
+  background: var(--color-blue);
+}
+
+.services .services-card .services-card-icon.--front-end {
+  background-color: var(--color-green);
+}
+
+.services .services-card .services-card-icon.--back-end {
+  background-color: var(--color-red);
+}
+
+.services .services-card h2.services-card-head {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.services .services-card p.services-card-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-gray-2);
+
+  margin-bottom: 30px;
+}
+
+.services .services-card button.btn {
+  padding: 9px 13px;
+
+  font-size: 16px;
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  color: var(--color-gray-3);
+  background-color: var(--color-gray-5);
+  border: none;
+  cursor: pointer;
+
+  border-radius: var(--border-radius-sm);
+  transition: all 0.3s ease-in-out;
+}
+
+.services .services-card:hover button.btn {
+  background-color: var(--color-blue);
+  color: white;
 }

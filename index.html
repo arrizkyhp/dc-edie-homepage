@@ -16,20 +16,21 @@
 </head>
 
 <body>
-  <nav id="navbar">
-    <h1 class="nav-logo">Edie</h1>
-
-    <ul class="nav-menu">
-      <li><a href="#" class="nav-list">Home</a></li>
-      <li><a href="#services" class="nav-list">Services</a></li>
-      <li><a href="#" class="nav-list">Our Works</a></li>
-      <li><a href="#" class="nav-list">Clients</a></li>
-      <li><a href="#" class="nav-list">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="navigation">
+    <nav id="navbar">
+      <h1 class="logo nav-logo">Edie</h1>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-list home active">Home</a></li>
+        <li><a href="#services" class="nav-list services">Services</a></li>
+        <li><a href="#our-works" class="nav-list our-works">Our Works</a></li>
+        <li><a href="#clients" class="nav-list clients">Clients</a></li>
+        <li><a href="#contact" class="nav-list contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <main>
-    <div class="hero">
+    <section class="hero" id="home">
       <p class="blue-text">Unhappy with your website?</p>
       <h1 class="hero-text">
         We create beautiful and fast web services
@@ -44,15 +45,15 @@
       </p>
       <div class="cta">
         <p class="cta-text">Want us to contact you? </p>
-        <div class="cta-form-group">
+        <div class="cta-form-group email-input">
           <input type="email" name="email" id="email" placeholder="Email">
           <button>Join</button>
         </div>
 
       </div>
-    </div>
+    </section>
 
-    <div class="services" id="services">
+    <section class="services content" id="services">
       <h1 class="subhead">
         We offer high demand services
       </h1>
@@ -100,8 +101,119 @@
         </div>
 
       </div>
-    </div>
+    </section>
+
+    <section class="works content" id="our-works">
+      <h1 class="subhead">Good design means good business</h1>
+      <div class="works-cards">
+
+        <div class="works-card --margin">
+          <img src="assets/images/smarthome.jpg" alt="works 1">
+          <p class="works-card-category">
+            Full stack application
+          </p>
+          <h1 class="works-card-title">
+            Smart home dashboard
+          </h1>
+        </div>
+
+        <div class="works-card">
+
+          <img src="assets/images/onboard.png" alt="works 2">
+
+          <p class="works-card-category">
+            UX/UI design
+          </p>
+          <h1 class="works-card-title">
+            Onboard application
+          </h1>
+        </div>
+
+        <div class="works-card --margin">
+          <img src="assets/images/booking.png" alt="works 3">
+          <p class="works-card-category">
+            Mobile application
+          </p>
+          <h1 class="works-card-title">
+            Booking system
+          </h1>
+        </div>
+
+        <div class="works-card">
+          <img src="assets/images/juice-product.png" alt="works 3">
+          <p class="works-card-category">
+            Front End applicati on
+          </p>
+          <h1 class="works-card-title">
+            Juice product homepage
+          </h1>
+          <a href="" class="works-more-link">
+            see more
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="team content">
+      <div class="team-text-area">
+        <p class="team-subhead">Meet the team</p>
+        <h1 class="team-header">We are chilled and a laidback team</h1>
+        <p class="team-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="team-image-area">
+        <img src="assets/images/person3.png" alt="woman smiling">
+        <img src="assets/images/person1.png" alt="man smiling">
+        <img src="assets/images/person2.png" alt="man with glasses smiling">
+      </div>
+    </section>
+
+    <section class="clients content" id="clients">
+      <p class="review">
+        “Fast and outstanding results. Edie understands their customer’s needs. They have a young and talented team.”
+      </p>
+      <div class="clients-card">
+        <img src="assets/images/person4.png" alt="man" class="clients-card-image">
+        <div class="clients-card-info">
+          <p class="clients-name">Carlos Tran</p>
+          <p class="clients-company">The Decorate Gatsby</p>
+        </div>
+      </div>
+    </section>
+
   </main>
+  <footer id="contact">
+    <div class="contact-area content">
+      <ul class="footer-menu">
+        <li><a href="#home" class="footer-link">Home</a></li>
+        <li><a href="#services" class="footer-link">Services</a></li>
+        <li><a href="#our-works" class="footer-link">Our Works</a></li>
+        <li><a href="#clients" class="footer-link">Clients</a></li>
+        <li><a href="#contact" class="footer-link">Contact</a></li>
+      </ul>
+      <div class="footer-middle">
+        <h1 class="logo footer-logo">Edie</h1>
+        <div class="social-media">
+          <a href="/" class="social">
+            <img src="assets/images/instagram.svg" alt="instagram">
+          </a>
+          <a href="/" class="social">
+            <img src="assets/images/linkedin.svg" alt="linkedin">
+          </a>
+          <a href="/" class="social">
+            <img src="assets/images/twitter.svg" alt="twitter">
+          </a>
+        </div>
+      </div>
+      <div class="cta">
+        <p class="cta-text">Want us to contact you? </p>
+        <div class="email-input">
+          <input type="email" name="email" id="email" placeholder="Email">
+          <button>Join</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
   <script src="assets/js/script.js"></script>
 </body>

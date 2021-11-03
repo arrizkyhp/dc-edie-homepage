@@ -31,9 +31,17 @@ html {
 
 body {
   position: relative;
-  max-width: 1300px;
-  margin: 0 auto;
   font-family: var(--font-poppins);
+}
+
+h1.logo {
+  font-family: var(--font-heebo);
+  font-size: 36px;
+}
+.navigation {
+  max-width: 1300px;
+  position: relative;
+  margin: 0 auto;
 }
 
 nav {
@@ -53,16 +61,22 @@ nav.sticky {
   top: 0;
   left: 0;
   width: 95%;
-  height: 40px;
-  background-color: #fff;
+  height: 45px;
+  /* background-color: #fff; */
   padding: 0 2rem;
+  z-index: 2;
 
   border: none;
 }
 
+nav.sticky .nav-menu {
+  backdrop-filter: blur(5px);
+  height: 100%;
+  align-items: center;
+  padding-left: 15px;
+}
+
 nav h1.nav-logo {
-  font-family: var(--font-heebo);
-  font-size: 36px;
   color: var(--color-gray-1);
 }
 
@@ -75,14 +89,31 @@ nav ul.nav-menu li a.nav-list {
   font-size: 24px;
   text-decoration: none;
   color: var(--color-gray-1);
+  position: relative;
+}
+
+nav ul.nav-menu li a.nav-list.active {
+  font-weight: 700;
+}
+
+nav ul.nav-menu li a.nav-list.active::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-dark);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
 }
 
 main {
-  padding-top: 150px;
   font-weight: 500;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 main .hero {
+  padding-top: 150px;
   margin-bottom: 200px;
 }
 
@@ -141,7 +172,15 @@ main .hero .cta p.cta-text {
   position: relative;
 }
 
-.hero .cta .cta-form-group input {
+.cta p.cta-text {
+  color: white;
+  margin-bottom: 10px;
+}
+.email-input {
+  position: relative;
+}
+
+.email-input input {
   height: 57px;
   font-size: 18px;
   font-family: var(--font-poppins);
@@ -158,11 +197,11 @@ main .hero .cta p.cta-text {
   padding-right: 123px;
 }
 
-.hero .cta .cta-form-group input::placeholder {
+.email-input input::placeholder {
   color: var(--color-gray-4);
 }
 
-.hero .cta .cta-form-group button {
+.email-input button {
   position: absolute;
   right: 4px;
   top: 5px;
@@ -182,23 +221,32 @@ main .hero .cta p.cta-text {
   background-color: var(--color-light-blue);
 }
 
+.content {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
 .services {
   margin-bottom: 200px;
 }
 
-.services h1.subhead {
+h1.subhead {
   font-family: Poppins;
   font-size: 36px;
   line-height: 54px;
 
-  padding-left: 110px;
+  /* padding-left: 110px; */
+}
+
+.services h1.subhead {
   max-width: 350px;
 }
 
 .services .services-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 1000px;
+  /* padding-left: 110px; */
+  /* max-width: 1000px; */
   margin: 0 auto;
   margin-top: 40px;
   gap: 40px;
@@ -279,4 +327,205 @@ main .hero .cta p.cta-text {
 .services .services-card:hover button.btn {
   background-color: var(--color-blue);
   color: white;
+}
+
+.works {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.works h1.subhead {
+  /* margin-left: 200px; */
+  max-width: 450px;
+}
+
+.works .works-cards {
+  /* margin-left: 110px; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  /* row-gap: 10px; */
+}
+
+.works .works-card.--margin {
+  margin-top: 160px;
+}
+
+.works .works-card img {
+  border-radius: var(--border-radius-sm);
+  width: 100%;
+  max-width: 545px;
+}
+
+.works .works-card p.works-card-category {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-gray-3);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.works .works-card h1.works-card-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--color-gray-1);
+}
+
+.works .works-card a.works-more-link {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  color: var(--color-blue);
+  text-decoration: none;
+  right: 30px;
+}
+
+.works .works-card a.works-more-link::after {
+  font-family: "Material Icons";
+  content: "arrow_right_alt";
+  position: absolute;
+  font-size: 24px;
+  right: -30px;
+  bottom: 0px;
+}
+
+.works .works-card a.works-more-link:hover {
+  color: var(--color-light-blue);
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  margin-bottom: 150px;
+}
+
+.team .team-text-area p.team-subhead {
+  font-size: 18px;
+  color: var(--color-red);
+  margin-bottom: 7px;
+}
+
+.team .team-text-area h1.team-header {
+  font-size: 36px;
+  line-height: 54px;
+  color: var(--color-gray-1);
+
+  max-width: 280px;
+  margin-bottom: 14px;
+}
+
+.team .team-text-area p.team-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  max-width: 280px;
+}
+
+.team .team-image-area {
+  display: grid;
+  grid-template-areas:
+    "girl man1"
+    "girl man2";
+  grid-gap: 24px;
+}
+
+.team .team-image-area img {
+  /* width: 100%; */
+  /* max-width: 260px; */
+  /* height: 260px; */
+  border-radius: var(--border-radius-xl);
+}
+.team .team-image-area img:nth-child(1) {
+  grid-area: girl;
+  align-self: center;
+}
+
+.team .team-image-area img:nth-child(2) {
+  grid-area: man1;
+}
+
+.team .team-image-area img:nth-child(3) {
+  grid-area: man2;
+}
+
+.clients {
+  margin-bottom: 200px;
+}
+
+.clients p.review {
+  font-size: 36px;
+  line-height: 54px;
+
+  max-width: 940px;
+  margin-bottom: 36px;
+}
+
+.clients .clients-card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.clients .clients-card img.clients-card-image {
+  max-width: 87px;
+  height: 82px;
+
+  border-radius: var(--border-radius-sm);
+}
+
+.clients .clients-card .clients-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.clients .clients-card .clients-card-info p.clients-name {
+  font-size: 24px;
+  color: var(--color-gray-1);
+}
+
+.clients .clients-card .clients-card-info p.clients-company {
+  font-size: 18px;
+  color: var(--color-gray-3);
+}
+
+footer {
+  background-color: var(--color-dark);
+  width: 100%;
+  height: 385px;
+  color: white;
+}
+
+footer .contact-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 45px;
+}
+
+footer .contact-area ul.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+footer .contact-area ul.footer-menu a.footer-link {
+  color: white;
+}
+
+footer .contact-area ul.footer-menu a.footer-link:hover {
+  color: var(--color-blue);
+}
+
+footer .contact-area .footer-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer .contact-area .footer-middle .social-media {
+  display: flex;
+  gap: 10px;
 }

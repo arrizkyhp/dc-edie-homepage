@@ -10,13 +10,12 @@ function scrollNav() {
       navbar.classList.remove("sticky");
     }
 }
-console.log(window.scrollY);
-
 
 // scroll active
 
 const sections = document.querySelectorAll("section");
 const navLink = document.querySelectorAll("nav .nav-menu li a");
+
 
 window.onscroll = () => {
   let current = "";
@@ -27,7 +26,7 @@ window.onscroll = () => {
     // console.log(document.body.offsetHeight);
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 40) {
+    if (scrollY >= sectionTop - 100) {
       current = section.getAttribute("id");
     }
   })
@@ -43,3 +42,49 @@ window.onscroll = () => {
     }
   })
 }
+
+const navLinks = document.querySelectorAll(".nav-list");
+const footerLinks = document.querySelectorAll(".footer-link")
+console.log(footerLinks)
+
+Array.from(navLinks).map(navLink => {
+  const navHref = navLink.getAttribute('href');
+  const section = document.querySelector(navHref);
+
+  navLink.onclick = e => {
+    sectionScroll(section, e);
+  }
+})
+
+Array.from(footerLinks).map((footerLink) => {
+  const footerHref = footerLink.getAttribute("href");
+  const section = document.querySelector(footerHref);
+
+  footerLink.onclick = e => {
+      sectionScroll(section, e);
+  };
+});
+
+
+function sectionScroll(section, link) {
+  // offset
+  const offset = 100;
+  // get body position
+  const bodyRect = document.body.getBoundingClientRect().top;
+  // get section position relative
+  const sectionRect = section.getBoundingClientRect().top;
+  // subtract the section from body
+  const sectionPosition = sectionRect - bodyRect;
+  // subtract offset
+  const offsetPosition = sectionPosition - offset;
+
+  link.preventDefault();
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
+}
+
+
+
+

@@ -19,13 +19,21 @@
   <div class="navigation">
     <nav id="navbar">
       <h1 class="logo nav-logo">Edie</h1>
-      <ul class="nav-menu">
-        <li><a href="#home" class="nav-list home active">Home</a></li>
-        <li><a href="#services" class="nav-list services">Services</a></li>
-        <li><a href="#our-works" class="nav-list our-works">Our Works</a></li>
-        <li><a href="#clients" class="nav-list clients">Clients</a></li>
-        <li><a href="#contact" class="nav-list contact">Contact</a></li>
-      </ul>
+      <button class="nav__hamburger-button" id="hamburger-button" onclick="handleToggle()">
+        <div class="nav__hamburger-button__bar"></div>
+        <div class="nav__hamburger-button__bar"></div>
+        <div class="nav__hamburger-button__bar"></div>
+      </button>
+
+      <div class="nav__slider" id="menu">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-list home active">Home</a></li>
+          <li><a href="#services" class="nav-list services">Services</a></li>
+          <li><a href="#our-works" class="nav-list our-works">Our Works</a></li>
+          <li><a href="#clients" class="nav-list clients">Clients</a></li>
+          <li><a href="#contact" class="nav-list contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </div>
 

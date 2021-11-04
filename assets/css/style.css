@@ -65,12 +65,12 @@ nav.sticky {
   /* background-color: #fff; */
   padding: 0 2rem;
   z-index: 2;
+  backdrop-filter: blur(8px);
 
   border: none;
 }
 
 nav.sticky .nav-menu {
-  backdrop-filter: blur(5px);
   height: 100%;
   align-items: center;
   padding-left: 15px;
@@ -79,6 +79,29 @@ nav.sticky .nav-menu {
 nav h1.nav-logo {
   color: var(--color-gray-1);
 }
+
+nav .nav__hamburger-button {
+  z-index: 3;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+nav .nav__hamburger-button .nav__hamburger-button__bar {
+  height: 4px;
+  width: 25px;
+  background-color: black;
+  margin-top: 4px;
+  border-radius: 2px;
+
+  display: none;
+  transform-origin: 23.6px;
+}
+
+/* nav .nav__slider {
+  height: 100%;
+} */
 
 nav ul.nav-menu {
   display: flex;
@@ -114,7 +137,6 @@ main {
 
 main .hero {
   padding-top: 150px;
-  margin-bottom: 200px;
 }
 
 main .hero p.blue-text {
@@ -227,7 +249,7 @@ main .hero .cta p.cta-text {
 }
 
 .services {
-  margin-bottom: 200px;
+  margin-top: 200px;
 }
 
 h1.subhead {
@@ -331,7 +353,7 @@ h1.subhead {
 
 .works {
   position: relative;
-  margin-bottom: 200px;
+  margin-top: 200px;
 }
 
 .works h1.subhead {
@@ -435,7 +457,7 @@ h1.subhead {
 
 .team .team-image-area img {
   /* width: 100%; */
-  /* max-width: 260px; */
+  max-width: 260px;
   /* height: 260px; */
   border-radius: var(--border-radius-xl);
 }
@@ -528,4 +550,22 @@ footer .contact-area .footer-middle {
 footer .contact-area .footer-middle .social-media {
   display: flex;
   gap: 10px;
+}
+
+@media (max-width: 1100px) {
+  main {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 860px) {
+  main {
+    padding: 0 20px;
+  }
+
+  nav .nav__slider {
+    position: fixed;
+    top: 0;
+    right: 100%;
+  }
 }

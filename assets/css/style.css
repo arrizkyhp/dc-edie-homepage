@@ -243,7 +243,7 @@ main .hero .cta p.cta-text {
 
   /* width: 100%; */
   max-width: 350px;
-  padding-right: 123px;
+  width: 100%;
 }
 
 .email-input input::placeholder {
@@ -814,10 +814,6 @@ footer .contact-area .footer-middle .social-media {
     max-width: 291px;
   }
 
-  main .hero .cta {
-    max-width: 291px;
-  }
-
   .email-input input {
     max-width: 291px;
     font-size: 14px;
@@ -827,7 +823,7 @@ footer .contact-area .footer-middle .social-media {
   .email-input button {
     font-size: 14px;
     padding: 11px 20px;
-    right: -6px;
+    right: -1px;
     top: 3px;
   }
 
@@ -889,10 +885,6 @@ footer .contact-area .footer-middle .social-media {
   main .clients p.review {
     font-size: 24px;
     line-height: 36px;
-  }
-
-  footer .cta {
-    max-width: 290px;
   }
 
   footer .cta .email-input {

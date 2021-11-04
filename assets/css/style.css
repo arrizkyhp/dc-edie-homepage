@@ -815,6 +815,7 @@ footer .contact-area .footer-middle .social-media {
   }
 
   .email-input input {
+    max-width: 291px;
     font-size: 14px;
     height: 47px;
   }

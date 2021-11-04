@@ -235,7 +235,7 @@ main .hero .cta p.cta-text {
   font-family: var(--font-poppins);
   color: var(--color-gray-2);
   background-color: var(--color-gray-6);
-  text-indent: 20px;
+  /* text-indent: 20px; */
   border-radius: var(--border-radius-sm);
 
   border: none;

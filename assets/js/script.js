@@ -85,6 +85,22 @@ function sectionScroll(section, link) {
   });
 }
 
+// toggle burger menu
+
+const toggle = (elementId) => {
+  const element = document.getElementById(elementId);
+
+  if(element.classList.contains(elementId + "--open")) {
+    element.classList.remove(elementId + "--open")
+  } else {
+    element.classList.add(elementId + "--open")
+  }
+}
+
+const handleToggle = () => {
+  toggle("menu")
+  toggle("hamburger-button")
+}
 
 
 

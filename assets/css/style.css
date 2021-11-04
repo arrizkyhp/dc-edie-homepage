@@ -62,7 +62,6 @@ nav.sticky {
   left: 0;
   width: 95%;
   height: 45px;
-  /* background-color: #fff; */
   padding: 0 2rem;
   z-index: 2;
   backdrop-filter: blur(8px);
@@ -86,6 +85,7 @@ nav .nav__hamburger-button {
   background-color: transparent;
   outline: none;
   border: none;
+  display: none;
 }
 
 nav .nav__hamburger-button .nav__hamburger-button__bar {
@@ -95,13 +95,21 @@ nav .nav__hamburger-button .nav__hamburger-button__bar {
   margin-top: 4px;
   border-radius: 2px;
 
-  display: none;
   transform-origin: 23.6px;
+  transition: all 0.4s ease-in-out;
 }
 
-/* nav .nav__slider {
-  height: 100%;
-} */
+nav .hamburger-button--open .nav__hamburger-button__bar:nth-child(1) {
+  transform: rotate(-45deg);
+}
+
+nav .hamburger-button--open .nav__hamburger-button__bar:nth-child(2) {
+  opacity: 0;
+}
+
+nav .hamburger-button--open .nav__hamburger-button__bar:nth-child(3) {
+  transform: rotate(45deg);
+}
 
 nav ul.nav-menu {
   display: flex;
@@ -127,6 +135,25 @@ nav ul.nav-menu li a.nav-list.active::after {
   position: absolute;
   bottom: -5px;
   left: 0;
+}
+
+nav .backdrop {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  background: rgba(1, 1, 1, 0.5);
+  z-index: 1;
+  opacity: 0;
+
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+nav .menu--open + .backdrop {
+  opacity: 1;
 }
 
 main {
@@ -553,6 +580,13 @@ footer .contact-area .footer-middle .social-media {
 }
 
 @media (max-width: 1100px) {
+  .navigation {
+    display: flex;
+    justify-content: center;
+  }
+  nav {
+    width: 95%;
+  }
   main {
     padding: 0 20px;
   }
@@ -563,9 +597,53 @@ footer .contact-area .footer-middle .social-media {
     padding: 0 20px;
   }
 
+  nav {
+    position: relative;
+  }
+
+  nav .nav__hamburger-button {
+    display: block;
+  }
+
+  nav .hamburger-button--open .nav__hamburger-button__bar {
+    background-color: white;
+  }
+
   nav .nav__slider {
     position: fixed;
     top: 0;
-    right: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 80%;
+    background-color: var(--color-dark);
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    transition: transform 0.4s ease-in-out;
+  }
+
+  nav .nav__slider.menu--open {
+    transform: translateX(-100%);
+    padding-left: 20px;
+    /* justify-content: center; */
+  }
+
+  nav ul.nav-menu {
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+  }
+
+  nav ul.nav-menu li a.nav-list {
+    color: white;
+  }
+
+  nav.sticky .nav__slider {
+    right: -100%;
+
+    height: 100vh;
+    width: 100vw;
   }
 }

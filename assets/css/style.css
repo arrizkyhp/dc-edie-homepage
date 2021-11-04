@@ -448,7 +448,7 @@ h1.subhead {
 
   align-items: center;
 
-  margin-bottom: 150px;
+  margin-top: 200px;
 }
 
 .team .team-text-area p.team-subhead {
@@ -502,6 +502,7 @@ h1.subhead {
 }
 
 .clients {
+  margin-top: 200px;
   margin-bottom: 200px;
 }
 
@@ -593,14 +594,6 @@ footer .contact-area .footer-middle .social-media {
 }
 
 @media (max-width: 860px) {
-  main {
-    padding: 0 20px;
-  }
-
-  nav {
-    position: relative;
-  }
-
   nav .nav__hamburger-button {
     display: block;
   }
@@ -632,18 +625,268 @@ footer .contact-area .footer-middle .social-media {
 
   nav ul.nav-menu {
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
+  }
+
+  nav.sticky ul.nav-menu {
+    height: auto;
+    align-items: flex-start;
+    padding-left: 0;
   }
 
   nav ul.nav-menu li a.nav-list {
     color: white;
   }
 
-  nav.sticky .nav__slider {
-    right: -100%;
+  main .hero p.blue-text {
+    text-indent: 100px;
+  }
 
-    height: 100vh;
-    width: 100vw;
+  main .hero h1.hero-text {
+    padding-left: 100px;
+  }
+
+  main .hero p.hero-description {
+    padding-left: 100px;
+  }
+
+  main .hero .cta {
+    padding-left: 100px;
+  }
+
+  main .services h1.subhead {
+    padding-left: 100px;
+  }
+
+  main .services .services-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  main .services .services-cards .services-card {
+    max-width: 1000px;
+  }
+
+  main .works {
+    margin-top: 100px;
+  }
+
+  main .team {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 100px;
+  }
+
+  footer .contact-area {
+    padding: 45px 20px 0 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  main {
+    padding: 0 13px;
+  }
+
+  main .hero p.blue-text {
+    text-indent: 40px;
+  }
+
+  main .hero h1.hero-text {
+    padding-left: 40px;
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  main .hero img {
+    margin-top: 15px;
+    margin-bottom: 22px;
+  }
+
+  main .hero p.hero-description {
+    padding-left: 40px;
+  }
+
+  main .hero .cta {
+    padding-left: 40px;
+  }
+
+  h1.subhead {
+    padding-left: 40px;
+    margin-bottom: 48px;
+    font-size: 36px;
+  }
+
+  .services {
+    margin-top: 100px;
+  }
+
+  main .services h1.subhead {
+    padding-left: 40px;
+  }
+
+  main .team .team-image-area img {
+    width: 100%;
+  }
+
+  main .clients {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  main .clients p.review {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  footer {
+    height: 100%;
+  }
+
+  footer .contact-area {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  footer .cta {
+    margin-bottom: 150px;
+  }
+
+  footer .cta .email-input {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav.sticky {
+    width: 88%;
+  }
+
+  h1.logo {
+    font-size: 24px;
+  }
+
+  nav .hamburger-button--open .nav__hamburger-button__bar:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+
+  nav .hamburger-button--open .nav__hamburger-button__bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav .hamburger-button--open .nav__hamburger-button__bar:nth-child(3) {
+    transform: rotate(45deg);
+  }
+
+  main .hero {
+    padding-top: 120px;
+  }
+
+  main .hero p.blue-text {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  main .hero h1.hero-text {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  main .hero img {
+    margin-top: 15px;
+    margin-bottom: 22px;
+  }
+
+  main .hero p.hero-description {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 275px;
+    margin-bottom: 33px;
+  }
+
+  main .hero h1.hero-text--bottom {
+    margin-bottom: 33px;
+    max-width: 227px;
+  }
+
+  main .hero .cta p.cta-text {
+    font-size: 10px;
+  }
+
+  main .hero .cta .cta-form-group {
+    max-width: 291px;
+  }
+
+  .email-input input {
+    font-size: 14px;
+    height: 47px;
+  }
+
+  .email-input button {
+    font-size: 14px;
+    padding: 11px 20px;
+    right: -6px;
+    top: 3px;
+  }
+
+  .services h1.subhead {
+    max-width: 267px;
+  }
+
+  .works h1.subhead {
+    max-width: 267px;
+  }
+
+  h1.subhead {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 46px;
+  }
+
+  .services .services-cards {
+    margin-top: 0;
+  }
+
+  .works .works-cards {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .works .works-card.--margin {
+    margin-top: 0;
+  }
+
+  .works .works-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .works .works-card p.works-card-category {
+    margin-top: 12px;
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .works .works-card h1.works-card-title {
+    font-size: 18px;
+  }
+
+  .works .works-card a.works-more-link {
+    position: relative;
+    right: 0;
+    margin-top: 38px;
+    max-width: 117px;
+    font-size: 18px;
+  }
+
+  .works .works-card a.works-more-link::after {
+    right: 0;
+    bottom: -5px;
+  }
+
+  main .clients p.review {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  footer .cta .email-input {
+    max-width: 290px;
   }
 }
